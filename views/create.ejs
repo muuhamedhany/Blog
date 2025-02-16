@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+
+  <header class="create-page"><%- include("partials/header.ejs") %></header>
+
+  <body>
+    <% if (locals.postId) { %>
+    <div class="createContainer">
+      <div class="form">
+        <h3>Edit Post</h3>
+        <form class="formInput" action="/update" method="post">
+          <input type="hidden" name="index" value="<%= postId %>" />
+          <input type="text" id="title" name="title" value="<%= title %>" />
+          <textarea id="content" name="content"><%= content %></textarea>
+          <button class="create crBtn" type="submit">UPDATE POST</button>
+        </form>
+      </div>
+    </div>
+    <% } else { %>
+    <div class="createContainer">
+      <div class="form">
+        <h3>Create Post</h3>
+        <form class="formInput" action="/add" method="post">
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Title..."
+            required
+          />
+          <textarea
+            id="content"
+            name="content"
+            placeholder="Content..."
+            required
+          ></textarea>
+          <button class="create crBtn" type="submit">CREATE POST</button>
+        </form>
+      </div>
+    </div>
+    <% } %>
+    <script src="index.js"></script>
+  </body>
+</html>

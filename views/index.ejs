@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>My Blog</title>
+  </head>
+
+  <header><%- include("partials/header.ejs") %></header>
+
+  <body>
+    <div class="container">
+      <% if (posts.length === 0) { %>
+      <div class="left-div div">
+        <div class="empty">
+          <p class="emptyP">No Blogs yet :(</p>
+        </div>
+      </div>
+      <div class="right-div div">
+        <a href="/create"
+          ><button class="create cPost">CREATE A POST</button></a
+        >
+      </div>
+      <% } else { %>
+      <div class="left-div div">
+        <div class="content">
+          <% posts.forEach((post, index) => { %>
+          <small class="date"><%= post.date %></small>
+          <a href="/view/<%= index %>">
+            <h3 class="title postTitle"><%= post.title %></h3>
+          </a>
+          <p class="contentP"><%= post.content %></p>
+          <hr />
+          <br />
+          <% }); %>
+        </div>
+      </div>
+      <div class="right-div div">
+        <a href="/create"
+          ><button class="create cPost">CREATE A POST</button></a
+        >
+        <div class="recent">
+          <h5>RECENT POSTS</h5>
+          <% posts.forEach((post, index) => { %>
+          <a href="/view/<%= index %>"
+            ><h3 class="title"><%= post.title %></h3>
+          </a>
+
+          <hr />
+          <% }); %>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>

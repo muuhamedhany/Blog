@@ -1,0 +1,294 @@
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  width: auto;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-weight: 100;
+}
+
+/* head */
+
+header {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px white solid;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  margin-right: 100px;
+  list-style: none;
+}
+
+img {
+  width: 200px;
+  padding: 15px;
+  margin-left: 100px;
+}
+
+.links {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.navLinks {
+  text-decoration: none;
+  color: rgb(206, 206, 206);
+  transition: 300ms;
+}
+
+#create {
+  color: rgb(83, 83, 83);
+}
+
+#create:hover {
+  font-size: 2.2rem;
+  color: white;
+  transition: 300ms;
+}
+
+.create-page #create {
+  color: rgb(206, 206, 206);
+}
+
+.create-page #home {
+  color: rgb(83, 83, 83);
+}
+
+.create-page #home:hover,
+.create-page #create:hover {
+  font-size: 2.2rem;
+  color: white;
+  transition: 300ms;
+}
+
+.navLinks:hover {
+  font-size: 2.2rem;
+  color: white;
+  transition: 300ms;
+}
+
+/* content */
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.div {
+  border: 1px solid rgb(58, 58, 58);
+  background-color: #0a0a0a;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.left-div {
+  width: 990px;
+}
+
+.left-div h3 {
+  font-size: 2rem;
+  font-weight: 350;
+  margin-top: 10px;
+}
+
+.left-div p {
+  font-size: 1.1rem;
+  width: 95%;
+}
+
+.left-div .date {
+  font-size: 1.2rem;
+}
+
+.right-div {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  padding: 20px;
+}
+
+.recent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.recent hr {
+  width: 100%;
+}
+
+.recent h5 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 100;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.recent h3 {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  transition: 300ms;
+  font-weight: normal;
+  font-size: 1.3rem;
+}
+
+.recent a {
+  text-decoration: none;
+}
+
+.recent h3:hover {
+  color: rgb(176, 176, 176);
+  transition: 300ms;
+}
+
+.div .content {
+  padding: 20px;
+}
+
+.content h3 {
+  color: white;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  transition: 300ms;
+}
+
+.content h3:hover {
+  color: rgb(176, 176, 176);
+  transition: 300ms;
+}
+
+.emptyP {
+  margin-top: 0;
+  margin-left: 15px;
+  font-size: 1.5rem;
+}
+
+button {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  padding: 8px 25px;
+  cursor: pointer;
+  transition: 300ms;
+  width: 271px;
+}
+
+button:hover {
+  background-color: rgb(201, 201, 201);
+  transition: 300ms;
+}
+
+.cPost {
+  margin-top: 0;
+}
+
+/* post creation */
+
+.form {
+  background-color: #0a0a0a;
+  border: white solid 1px;
+  border-radius: 20px;
+  padding: 50px;
+  width: 50%;
+}
+
+.createContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.createContainer h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+input[type="text"] {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 25px;
+  height: 50px;
+  border-radius: 10px;
+  border: white solid 1px;
+  padding-left: 10px;
+}
+
+textarea {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 10px;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 20px;
+  height: 300px;
+  border-radius: 10px;
+  border: white solid 1px;
+  resize: vertical;
+}
+
+.crBtn {
+  margin: 0;
+  align-self: flex-end;
+  width: 30%;
+}
+
+/* Post View */
+
+.viewDiv {
+  width: auto;
+  padding: 20px;
+}
+
+.delete {
+  background-color: #f95656;
+  color: white;
+}
+
+.delete:hover {
+  background-color: #b13e3e;
+}
